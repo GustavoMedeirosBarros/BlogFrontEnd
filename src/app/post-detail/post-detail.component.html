@@ -1,1 +1,13 @@
-<p>post-detail works!</p>
+<div class="container mt-5" *ngIf="post">
+  <div class="jumbotron text-center p-5 rounded">
+    <h2>{{ post.titulo }}</h2>
+    <p>{{ post.conteudo }}</p>
+    <a routerLink="/posts" class="btn btn-secondary">Voltar</a>
+  </div>
+</div>
+
+<div *ngIf="!post">
+  <div class="jumbotron text-center p-5 rounded">
+    <p>Post não encontrado.</p>
+  </div>
+</div>

@@ -1,11 +1,30 @@
 <div class="container mt-5">
-  <div class="jumbotron text-center p-5 rounded">
-    <h1 class="display-4">Bem-vindo ao Meu Blog!</h1>
-    <p class="lead">
+  <div class="jumbotron text-center p-5 rounded bg-light shadow">
+    <h1 class="display-4 fw-bold text-primary">Bem-vindo ao Meu Blog!</h1>
+    <p class="lead text-muted">
       Este é um espaço onde compartilho meus pensamentos, ideias e
       conhecimentos.
     </p>
     <hr class="my-4" />
-    <p>Confira os posts mais recentes abaixo:</p>
+
+    <div class="row mt-4">
+      <div class="col text-start">
+        <p class="h5 text-secondary">Confira os posts mais recentes abaixo:</p>
+        <a routerLink="/posts" class="btn btn-primary btn-lg mt-2 shadow-sm">
+          Últimos Posts
+        </a>
+      </div>
+      <div class="col text-end">
+        <p class="h5 text-secondary">
+          Saiba mais sobre o autor do blog abaixo:
+        </p>
+        <a
+          routerLink="/about"
+          class="btn btn-outline-primary btn-lg mt-2 shadow-sm"
+        >
+          Sobre
+        </a>
+      </div>
+    </div>
   </div>
 </div>
