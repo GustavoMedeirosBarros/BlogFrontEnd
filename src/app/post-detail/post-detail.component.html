@@ -1,13 +1,17 @@
 <div class="container mt-5" *ngIf="post">
-  <div class="jumbotron text-center p-5 rounded">
-    <h2>{{ post.titulo }}</h2>
-    <p>{{ post.conteudo }}</p>
-    <a routerLink="/posts" class="btn btn-secondary">Voltar</a>
+  <div class="jumbotron text-center p-5 rounded bg-light shadow">
+    <h2 class="display-5 fw-bold text-primary">{{ post.titulo }}</h2>
+    <p class="lead text-muted mt-3" [innerHTML]="post.conteudo"></p>
+    <p class="text-muted">
+      <small>Publicado em: {{ post.data }}</small>
+    </p>
+    <a routerLink="/posts" class="btn btn-secondary mt-3 shadow-sm">Voltar</a>
   </div>
 </div>
 
 <div *ngIf="!post">
-  <div class="jumbotron text-center p-5 rounded">
-    <p>Post não encontrado.</p>
+  <div class="jumbotron text-center p-5 rounded bg-light shadow">
+    <p class="h4 text-secondary">Post não encontrado.</p>
+    <a routerLink="/posts" class="btn btn-secondary mt-3 shadow-sm">Voltar</a>
   </div>
 </div>

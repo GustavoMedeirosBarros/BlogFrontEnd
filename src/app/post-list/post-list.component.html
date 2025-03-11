@@ -1,15 +1,20 @@
 <div class="container mt-5">
-  <h2>Ultimas postagens:</h2>
+  <h2>Últimas postagens:</h2>
   <div class="row">
     <div class="col-md-4" *ngFor="let post of posts">
-      <div class="card">
-        <div class="card-body">
-          <div class="card-title">{{ post.titulo }}</div>
-          <div class="card-text">{{ post.conteudo }}</div>
-          <div class="text-muted"></div>
-          <a [routerLink]="['/posts', post.id]" class="btn btn-primary"
-            >Leia mais</a
-          >
+      <div class="card mb-4 shadow-sm h-100">
+        <img
+          src="{{ post.imagem }}"
+          class="card-img-top"
+          alt="{{ post.titulo }}"
+        />
+        <div class="card-body d-flex flex-column">
+          <h5 class="card-title">{{ post.titulo }}</h5>
+          <p class="card-text flex-grow-1">{{ post.conteudo }}</p>
+          <div class="text-muted">Publicado em: {{ post.data }}</div>
+          <a [routerLink]="['/posts', post.id]" class="btn btn-primary mt-3">
+            Leia mais
+          </a>
         </div>
       </div>
     </div>
